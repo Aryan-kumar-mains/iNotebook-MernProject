@@ -14,7 +14,6 @@ console.log(process.env.JWT_SECRET);
 Connection(); // for connecting to mongodb via mongoose
 
 const app = express();
-const PORT = 5000;
 
 app.use(express.json()); //for using req.body
 
@@ -45,8 +44,9 @@ app.use((err, req, res, next) => {
     })
 });
 
+const port = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`iNotebook Server is successfully running on PORT ${PORT}`));
+app.listen(port, () => console.log(`iNotebook Server is successfully running on PORT ${port}`));
 
 
 //install nodemon by writing e.g. npm i -D nodemon, -D for devDependencies so that it'l not be a part of our project
