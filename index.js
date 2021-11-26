@@ -2,10 +2,15 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
+import bodyParser from 'body-parser';
+import path from 'path';
+
+
 // components
 import Routes from "./routes/routes.js";
 import Connection from "./db.js";
 
+const __dirname = path.resolve();
 
 dotenv.config({ path: './.env' });
 
@@ -18,6 +23,7 @@ const app = express();
 app.use(express.json()); //for using req.body
 
 // Available Routes
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use("/", Routes);
 
