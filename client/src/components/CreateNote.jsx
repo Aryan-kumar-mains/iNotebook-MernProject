@@ -77,7 +77,7 @@ const CreateNote = () => {
         <Dialog
             open={open}
             onClose={handleClose}
-            disableBackdropClick
+        // disableBackdropClick
         >
             <Box
                 style={{ overflowX: "hidden" }}

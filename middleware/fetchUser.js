@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";  // it is a protected layer btw client and server while logging, it gives a token to user at the time of signup and verify it at the time of logging
 
-const JWT_SECRET = process.env.JWT_SECRET;  // this is used as a signature while verifying token which is given by jwt
+// const JWT_SECRET = process.env.JWT_SECRET;  // this is used as a signature while verifying token which is given by jwt
+const JWT_SECRET = "imgoodboy";  // this is used as a signature while verifying token which is given by jwt
 
 // Get the user from the jwt token and add id to req object using header
 const fetchUser = (req, res, next) => {

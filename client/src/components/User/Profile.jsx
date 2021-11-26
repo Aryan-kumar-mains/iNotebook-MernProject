@@ -46,8 +46,8 @@ const Profile = () => {
 
     const [userInfo, setUserInfo] = useState({
         // id: userData.user._id,  // This is not recommended because Id is present in auth token and we get id by fetch user middleware
-        name: userData.user.name,
-        email: userData.user.email
+        name: userData?.user.name,
+        email: userData?.user.email
     });
 
     const onChange = (event) => {

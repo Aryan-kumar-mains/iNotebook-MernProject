@@ -18,9 +18,9 @@ import Profile from "./components/User/Profile.jsx";
 function App() {
   return (
     <SignUpState>
-      <DialogState> // this is a context, for opening Dialog
-        <DrawerState>  // this is a context, for opening left drawer
-          <NoteState>  // this is a context, for fetching all the notes
+      <DialogState> {/*  this is a context, for opening Dialog */}
+        <DrawerState> {/* this is a context, for opening left drawer  */}
+          <NoteState>  {/* this is a context, for fetching all the notes */}
             <BrowserRouter>
               <Navbar />
               <Box>

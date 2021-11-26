@@ -8,7 +8,8 @@ import User from "../models/UserSchema.js";
 import AppError from "../utils/appError.js";
 import { catchAsync } from "../utils/catchAsync.js";
 
-const JWT_SECRET = process.env.JWT_SECRET  // this is used as a signature while verifying token which is given by jwt
+//const JWT_SECRET = process.env.JWT_SECRET  // this is used as a signature while verifying token which is given by jwt
+const JWT_SECRET = "imgoodboy"  // this is used as a signature while verifying token which is given by jwt
 console.log(process.env.JWT_SECRET);
 
 // Route 1 : Sign Up  using POST "/api/auth/createUser"

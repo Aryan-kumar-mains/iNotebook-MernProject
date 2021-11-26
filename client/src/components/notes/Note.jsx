@@ -39,7 +39,7 @@ const Note = () => {
     }
     const textForEmptyNote = <Box style={{ margin: "auto" }}>
         No Notes to display.
-        <Button onClick={openDialog} className={classes.btn}><Typography style={{textDecoration: "underline", textDecorationColor: "blue"}}> Create </Typography></Button>
+        <Button onClick={openDialog} className={classes.btn}><Typography style={{ textDecoration: "underline", textDecorationColor: "blue" }}> Create </Typography></Button>
         Your First Note.
     </Box>
 
@@ -51,7 +51,7 @@ const Note = () => {
                     {(!notes?.length || notes.length === 0) ? textForEmptyNote :
                         notes?.length && notes.map((note) => {
                             return (
-                                <Grid item sm={3}>
+                                <Grid key={note._id} item sm={3}>
                                     <NoteItem note={note} />
                                 </Grid>
                             )
@@ -60,7 +60,7 @@ const Note = () => {
 
                 </Grid>
             </Container>
-            
+
             <CreateNote />  {/* this is a dialog box*/}
         </div>
     )
