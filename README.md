@@ -69,7 +69,7 @@ DATABASE_PASSWORD=<cluster-password>
 JWT_SECRET=testsecret
 ```
 
-Replace the **<cluster-connection-string>** and **<cluster-password>** with your connection string and password.
+Replace the **cluster-connection-string** and **cluster-password** with your connection string and password.
 
 You can access the connection string by pressing on **Connect** -> **Connect your application** on your cluster
 
