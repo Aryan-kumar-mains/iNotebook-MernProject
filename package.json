@@ -5,9 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "install-modules": "npm i && cd client && npm i",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "start:dev": "nodemon --experimental-modules --es-module-specifier-resolution=node index.js",
+    "start-all:dev": "concurrently \"npm run start:dev\" \"cd client && npm run start\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
@@ -23,6 +25,7 @@
     "mongoose": "^6.0.7"
   },
   "devDependencies": {
+    "concurrently": "^7.4.0",
     "nodemon": "^2.0.13"
   },
   "engines": {

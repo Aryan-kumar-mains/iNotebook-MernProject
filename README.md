@@ -38,3 +38,44 @@ git push origin branch-name
 * Wait for your PR review and merge approval!
 * __Star this repository__ if you had fun!
 
+---
+## Setup Project
+
+1. Install node modules for both client and server
+
+```javascript
+npm run install-modules
+```
+
+2. Create Mongo DB and Update configurations
+
+- Login to https://account.mongodb.com/account/login
+- Create a new project or open an existing project
+
+<p align="center">
+  <img src="assets/readme/mongo-atlas-project-view.png" />
+</p>
+
+- Create a new cluster (Shared Clusters are free) and set configurations
+
+![create-cluster](assets/readme/create-cluster.gif)
+
+3. Create a file named .env in the root directory and add the following code
+
+```
+PORT=5000
+DATABASE=<cluster-connection-string>
+DATABASE_PASSWORD=<cluster-password>
+JWT_SECRET=testsecret
+```
+
+Replace the **cluster-connection-string** and **cluster-password** with your connection string and password.
+
+You can access the connection string by pressing on **Connect** -> **Connect your application** on your cluster
+
+4. Run both client and server
+
+```javascript
+npm run start-all:dev
+```
+
