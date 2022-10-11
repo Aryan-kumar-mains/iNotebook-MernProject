@@ -1,0 +1,23 @@
+version: "3"
+services:
+  nodejs-server:
+    build:
+      context: ./
+    ports:
+      - "5000:5000"
+    container_name: node-api
+    volumes:
+      - .:/api
+      - /api/node_modules
+  react-client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    container_name: client
+    stdin_open: true
+    environment:
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - ./client:/app/client
+      - /app/client/node_modules
